@@ -1,6 +1,6 @@
 # Comfy Store
 
-## Libraries
+## Libraries & FramEWorks
 
 - Axios
 - React Redux
@@ -10,3 +10,5 @@
 - React Icons
 - React Router Dom
 - React-toastify
+- Tailwind CSS
+- Daisy UI
