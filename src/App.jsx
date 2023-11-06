@@ -1,3 +1,6 @@
+// React Router DOM
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+// Import Pages
 import {
   About,
   Cart,
@@ -12,11 +15,55 @@ import {
   SingleProduct,
 } from "./pages";
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomeLayout />,
+    errorElement: <Error />,
+    children: [
+      {
+        index: true,
+        element: <Landing />,
+      },
+      {
+        path: "about",
+        element: <About />,
+      },
+      {
+        path: "products",
+        element: <Products />,
+      },
+      {
+        path: "products/:id",
+        element: <SingleProduct />,
+      },
+      {
+        path: "orders",
+        element: <Orders />,
+      },
+      {
+        path: "cart",
+        element: <Cart />,
+      },
+      {
+        path: "checkout",
+        element: <Checkout />,
+      },
+    ],
+  },
+  {
+    path: "/login",
+    element: <Login />,
+    errorElement: <Error />,
+  },
+  {
+    path: "/register",
+    element: <Register />,
+    errorElement: <Error />,
+  },
+]);
+
 const App = () => {
-  return (
-    <div>
-      <h1 className="text-7xl font-bold underline">Tailwind project</h1>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 };
 export default App;
