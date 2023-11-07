@@ -15,7 +15,7 @@ const Register = () => {
           <SubmitBtn text="register" />
         </div>
         <p className="text-center">
-          Already a member?{" "}
+          Already a member?
           <Link
             to="/login"
             className="ml-2 link link-hover link-primary capitalize">
