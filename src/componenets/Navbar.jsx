@@ -1,9 +1,16 @@
+import { NavLink } from "react-router-dom";
 import { BsCart3, BsMoonFill, BsSunFill } from "react-icons/bs";
 import { FaBarsStaggered } from "react-icons/fa6";
-import { NavLink } from "react-router-dom";
 import NavLinks from "./NavLinks";
+import { useState } from "react";
 
 const Navbar = () => {
+  // DARK MODE
+  const [theme, setTheme] = useState(false);
+  const handleTheme = () => {
+    setTheme(!theme);
+  };
+
   return (
     <nav className="bg-base-200">
       <div className="navbar align-element">
@@ -21,7 +28,7 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 bg-base-200 rounded-box w-52">
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 bg-base-200 rounded-box  w-52">
               <NavLinks />
             </ul>
           </div>
@@ -33,6 +40,17 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           {/* THEME ICONS & CART LINK */}
+
+          <label className="swap swap-rotate">
+            {/* this hidden checkbox controls the state */}
+            <input type="checkbox" onChange={handleTheme} />
+
+            {/* sun icon */}
+            <BsSunFill className="swap-on h-5 w-5" />
+
+            {/* moon icon */}
+            <BsMoonFill className="swap-off h-5 w-5" />
+          </label>
           <NavLink to="cart" className="btn btn-ghost btn-circle btn-md ml-4 ">
             <div className="indicator">
               <BsCart3 className="h-6 w-6" />
