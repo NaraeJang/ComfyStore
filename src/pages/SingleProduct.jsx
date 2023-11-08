@@ -86,7 +86,7 @@ const SingleProduct = () => {
           {/* CART BTN */}
           <div className="mt-10">
             <button
-              className="btn btn-secondary btn-md"
+              className="btn btn-secondary max-sm:btn-block sm:btn-md  "
               onClick={() => console.log("added to bag")}>
               Add to bag
             </button>
