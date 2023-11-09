@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useLoaderData, useLocation, useNavigate } from "react-router-dom";
 
 const PaginationContainer = () => {
