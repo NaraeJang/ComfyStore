@@ -32,8 +32,8 @@ const Filters = () => {
       />
       {/* ORDER */}
       <FormSelect
-        label="select category"
-        name="category"
+        label="sort by"
+        name="order"
         list={["a-z", "z-a", "high", "low"]}
         size="select-sm"
       />
