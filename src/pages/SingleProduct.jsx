@@ -101,7 +101,7 @@ const SingleProduct = () => {
               className="select select-secondary select-bordered select-md"
               value={amount}
               onChange={handleAmount}>
-              {generateAmountOptions(3)}
+              {generateAmountOptions(10)}
             </select>
           </div>
           {/* CART BTN */}
