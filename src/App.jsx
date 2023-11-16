@@ -22,11 +22,13 @@ import { loader as landingLoader } from "./pages/Landing";
 import { loader as singleProductLoader } from "./pages/SingleProduct";
 import { loader as ProductsLoader } from "./pages/Products";
 import { loader as CheckoutLoader } from "./pages/Checkout";
+import { loader as OrdersLoader } from "./pages/Orders";
 
 // actions
 import { action as registerAction } from "./pages/Register";
 import { action as loginAction } from "./pages/Login";
 import { action as checkoutAction } from "./components/CheckoutForm";
+
 import { store } from "./store";
 
 const router = createBrowserRouter([
@@ -60,6 +62,7 @@ const router = createBrowserRouter([
       {
         path: "orders",
         element: <Orders />,
+        loader: OrdersLoader(store),
       },
       {
         path: "cart",

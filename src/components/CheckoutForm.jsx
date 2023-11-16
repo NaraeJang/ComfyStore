@@ -31,14 +31,13 @@ export const action =
       );
       store.dispatch(clearCart());
       toast.success("order placed successfully");
-
       return redirect("/orders");
     } catch (error) {
       const errorMessage =
         error?.response?.data?.error?.message ||
         "there was an error placing your order";
       toast.error(errorMessage);
-
+      if (error.response.state === 401 || 403) return redirect("/login");
       return null;
     }
   };
