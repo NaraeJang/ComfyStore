@@ -15,10 +15,9 @@ const Hero = () => {
           We're changing the way people shop.
         </h1>
         <p className="mt-8 max-w-xl text-lg leading-8">
-          Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
-          cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat
-          aliqua. Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
-          qui lorem cupidatat commodo.
+          Explore our latest collection of comfortable and stylish products.
+          From cozy home essentials to trendy fashion items, we've got you
+          covered!
         </p>
         <div className="mt-10">
           <Link to="products" className="btn btn-primary">
